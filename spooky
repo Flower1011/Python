@@ -1,0 +1,23 @@
+# Write a function called spooky which takes in a string and returns a string, 
+composed of the same characters, in alternating case (beginning with lowercase).
+
+
+def spooky(string):
+  result = ""
+
+### YOUR CODE STARTS HERE ###
+  for k in range(len(string)):
+    if not k % 2:
+      result += string[k].lower()
+    else:
+      result += string[k].upper()
+  return result
+
+
+
+ 
+
+
+
+### YOUR CODE ENDS HERE ###
+#print(spooky("Helloo"))
