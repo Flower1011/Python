@@ -1,0 +1,31 @@
+# Write a function called h4ck3r_sp33k that takes in a string and 
+returns the string in "h4cker sp33k" by replacing characters the following way:
+
+  #'A','a' => '4'
+  #'E','e' => '3'
+  #'L','l' => '1'
+  #'T','t' => '+'
+
+def h4ck3r_sp33k(text):
+### YOUR CODE STARTS HERE ###
+  result = ""
+
+  for i in text:
+    if i == "a":
+      result += "4"
+    elif i == "e":
+      result += "3"
+    elif i == "l":
+      result += "1"
+    elif i == "t":
+      result += "+"
+    else:
+      result += i
+  return result
+
+#Another way to code the problem
+  #new_text = text.replace('a', '4').replace('e', '3').replace('l', '1').replace('t', '+')
+  #return new_text
+  
+### YOUR CODE ENDS HERE ###
+print(h4ck3r_sp33k("I am an elite hacker"))
