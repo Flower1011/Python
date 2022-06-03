@@ -1,0 +1,16 @@
+# Define a function named multiple_of_3, which takes one argument, 
+an integer, and returns True if the integer is a multiple of 3 and False otherwise.
+
+
+### YOUR CODE STARTS HERE ###
+def multiple_of_3(num_5):
+  if (num_5 % 3) == 0:
+    return True
+  elif (num_5 % 3) == 1:
+    return False
+print(multiple_of_3(16))
+
+
+
+
+### YOUR CODE ENDS HERE ###
