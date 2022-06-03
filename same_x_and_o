@@ -1,0 +1,17 @@
+# Write a function called same_x_and_o that takes in a string and 
+returns true if it has the same number of "x" and "o" characters in it.
+
+def same_x_and_o(string):
+### YOUR CODE STARTS HERE ###
+
+  x_counter = 0
+  o_counter = 0
+  for char in string.lower():
+    if char == "x":
+      x_counter += 1
+    elif char == "o":
+      o_counter += 1
+  if x_counter == o_counter:
+    return True
+  else:
+    return False
