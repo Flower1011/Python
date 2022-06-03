@@ -1,0 +1,16 @@
+# Define a function named greater_than_ten, which takes in an integer and returns 
+True if the number is greater than 10 and False if the number is less than or equal to 10.
+
+
+### YOUR CODE STARTS HERE ###
+
+# Define a function named greater_than_ten, which takes in an integer
+
+def greater_than_ten(arg1):
+# returns True if the number is greater than 10
+  if arg1 > 10:
+    return True
+# False if the number is less than 10.
+  elif arg1 <= 10:
+    return False
+### YOUR CODE ENDS HERE ###
