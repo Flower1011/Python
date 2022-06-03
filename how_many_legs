@@ -1,0 +1,17 @@
+# Define a function named how_many_legs, which takes three parameters, 
+num_cows, num_chickens, and num_spiders 
+and returns the total number of legs.
+
+
+### YOUR CODE STARTS HERE ###
+def how_many_legs(num_cows, num_chickens, num_spiders):
+  cows = num_cows * 4  
+  chickens = num_chickens * 2
+  spiders = num_spiders * 8  
+  return cows + chickens + spiders
+print(how_many_legs(1, 1, 1))
+
+
+
+
+### YOUR CODE ENDS HERE ###
