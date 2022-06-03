@@ -1,0 +1,36 @@
+# Write control flow that prints every number from 1 up to num inclusively. 
+However, if the current number is evenly divisible by 3, print "Full" instead, 
+if the current number is evenly divisible by 5, 
+print "Stack" instead, and if the current number is evenly divisible by BOTH 3 and 5, 
+print out "FullStack" instead. 
+Note that the variable num has already been 
+defined for you in the fizz_buzz_fullstack function definition.
+
+
+def fizz_buzz_fullstack(num:int)->str:
+  old_stdout = sys.stdout
+  sys.stdout = mystdout = StringIO()
+  try:
+    pass
+    
+    
+    ### YOUR CODE STARTS HERE ###
+    for x in range(1, num+1):
+      if x % 3 == 0 and x % 5 != 0:
+        print("Full")
+      elif x % 5 == 0 and x % 3 != 0: 
+        print ("Stack")
+      elif x % 3 == 0 and x % 5 == 0: 
+        print("FullStack")
+      else:
+        print(x)
+
+
+
+    ### YOUR CODE ENDS HERE ###
+  except Exception as e:
+    print(e)
+  sys.stdout = old_stdout
+  result = mystdout.getvalue()
+  mystdout.close()
+  return result
