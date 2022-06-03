@@ -1,4 +1,7 @@
-Someone dropped our cyber haiku dictionary and the order in which they were stored is all messed up. Can you fix the order dictionary and print them out in the right order? The name of your helper function(s) and parameter(s) is/are up to you. 
+Someone dropped our cyber haiku dictionary and the order in which they were stored is all messed up. 
+Can you fix the order dictionary and print them out in the right order? 
+The name of your helper function(s) and parameter(s) is/are up to you. 
+
 #!/usr/bin/env python3
 
 ### IMPORT STATEMENTS ###
