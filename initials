@@ -1,0 +1,17 @@
+# Write a function called initials which takes in a string of a full-name, 
+where each name is separated by a space. 
+Return back a string representing the initials of a string passed to this function.
+
+
+#def initials(string):
+### YOUR CODE STARTS HERE ###
+
+def initials(phrase):
+  words = phrase.split()
+  result = ""
+  for i in range(len(words)):
+    result += words[i][0].upper()
+  return result
+
+### YOUR CODE ENDS HERE ###
+#print(initials("Michael Jordan"))
