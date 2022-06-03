@@ -1,0 +1,48 @@
+Write a program, which takes two distinct integers separated by space as input and prints the sum of all the integers between them, including the two given numbers. 
+Note that the numbers can appear in either order.
+
+#!/usr/bin/env python3
+import sys
+# alternatively could just import argv alone but need to update the code in boiler plate accordingly
+#from sys import argv
+
+# function for Summation as a Service
+def sum_service(path):
+    # open the file for reading
+    with open(path, "r") as f:
+        # iterate over every line in the file
+        for line in f:
+            # initialize the sum for each line
+            sum_of = 0
+            # separate our individual numbers into a list
+            numbers = line.rstrip().split()
+            # iterate over our list of numbers and convert into integers
+            for j in range(len(numbers)):
+                numbers[j] = int(numbers[j])
+            # sort our list so larger number is the last element
+            numbers.sort()
+            # pop returns the last element in the list and removes it
+            # grab our larger number (should be at the end after sorting)
+            greater = numbers.pop()
+            # grab the remaining value (the only one left in the list)
+            smaller = numbers.pop()
+
+            # add the numbers in between the smaller and greater
+            for i in range(smaller, greater):
+                sum_of += i
+            # range is not inclusive, so we need to add our larger number
+            sum_of += greater
+
+            # print instead of return since we need to calculate multiple lines and return would 
+           # stop the process early
+            print(sum_of)
+
+def main(path):
+    # simple call here since this function already prints
+    sum_service(path)
+
+# "boiler plate"
+if __name__ == "__main__":
+    # extract our file path and pass it to main to use
+    path = sys.argv[1]
+    main(path)
