@@ -1,3 +1,7 @@
+# Write a function called match_ends with a parameter called str_list (list), which represents a list of strings. 
+Your match_ends function should return an int value representing how many strings are both greater than or equal to 2 in length, 
+and have the same char at the beginning and end.
+
 #!/usr/bin/env python3
 
 ### IMPORT STATEMENTS ###
