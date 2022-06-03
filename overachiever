@@ -1,0 +1,18 @@
+# Write a function called overachiever which takes in a list of lists. 
+The sublists contain both a name (string) of a student followed by a float 
+representing his/her/their average for the class. 
+Return the name of the student with the highest exam score.
+
+
+### YOUR CODE STARTS HERE ###
+
+def overachiever(students):
+  highest_grade_name = ""
+  max_score = -float("inf")
+  for name, score in students:
+    if score > max_score:
+      max_score = score
+      highest_grade_name = name
+  return highest_grade_name
+ 
+### YOUR CODE ENDS HERE ###
