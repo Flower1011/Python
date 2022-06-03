@@ -1,0 +1,114 @@
+'''Write a function move_knight which takes in a list coords_and_dirs, whose first element is a list, indicating the coordinates of the Knight's starting position, 
+and whose second element is a four-character string, indicating where the Knight should move in one turn.
+
+A Knight must move exactly three spaces, either two spaces in a vertical direction and one in a horizontal direction, 
+or one space in a vertical direction and two spaces in a horizontal direction.
+
+Assume the string at the first index of coords_and_dirs will always be formatted such that:
+
+  The first character is either 'U' or 'D' (where 'U' is up and 'D' is down) and represents the file (vertical direction)
+
+  The second character is either '1' or '2' and represents how many spaces in the vertical direction the Knight will travel
+  
+  The third character is either 'L' or 'R' (where 'L' is left and 'R' is right) and represents the rank (horizontal direction)
+  
+  The fourth character is either '1' or '2' and represents how many spaces in the horizontal direction the Knight will travel
+
+For example: "U1L2" would read as "up one space, left two spaces".
+
+
+
+The chess board is a grid, with each space identified as [file, rank]:
+
+  [0, 7] --> .    .    .    .    .    .    .    . <-- [7, 7]
+
+             .    .    .    .    .    .    .    .
+
+             .    .    .    .    .    .    .    .
+
+             .    .    .    .    .    .    .    .
+
+             .    .    .    .    .    .    .    .
+
+             .    .    .    .    .    .    .    .
+
+             .    .    .    .    .    .    .    . 
+
+  [0, 0] --> .    .    .    .    .    .    .    . <-- [7, 0]
+
+For example: The starting coordinates [7, 7] would represent the knight starting in the upper right corner of the chess board.
+
+
+
+If the given directions would be an illegal move, or if the move would cause the Knight to fall off the board, return the string "Illegal Move - Horsey Down!"
+
+Else, the function should return a string with updated file and rank, formatted as such: "The knight has moved to [file, rank]."
+'''
+
+### YOUR CODE STARTS HERE ###
+
+def move_knight(coords_and_dirs):
+  
+  coord = coords_and_dirs[0]
+  x_axis = coord[0]
+  y_axis = coord[1]
+  direction = coords_and_dirs[1]
+  x_move = int(direction[3])
+  y_move = int(direction[1])
+  up_down = direction[0]
+  left_right = direction[2]
+  
+  if up_down == 'U':
+    y_axis += y_move
+  elif up_down == 'D':
+    y_axis -= y_move
+  #same for y_axis
+  if left_right == 'L':
+    x_axis -= x_move
+  elif left_right == 'R':
+    x_axis += x_move
+  if x_axis > 7  or x_axis < 0 or y_axis > 7 or y_axis < 0:
+    return 'Illegal Move - Horsey Down!'
+  elif x_move == 2 and y_move != 1:
+    return 'Illegal Move - Horsey Down!'
+  elif y_move == 2 and x_move != 1:
+    return 'Illegal Move - Horsey Down!'
+  elif x_move > 2 or x_move < 1:
+    return 'Illegal Move - Horsey Down!'
+  elif y_move > 2 or y_move < 1:
+    return 'Illegal Move - Horsey Down!'
+  else:
+    return ('The knight has moved to ['+str(x_axis)+', '+str(y_axis)+'].')
+  
+  print(move_knight([[1,2],'U1R2']))
+  
+  
+  
+  # variables
+  # Verify that the move is valid
+    # List out the valid moves
+    # check is string is a valid move
+  # Verify that the destination is valid
+    # calculate the final coordinates of the knight
+    # check if 0 <= xpos <= 7
+    # check if 0 <= ypos <= 7
+  # return the final position of the knight
+  #
+  valid_moves = ["U1L2","U2L1","U2R1", "U1R2", "D1R2", "D2R1", "D2L1", "D1L2"]
+  #count = 0
+  #for i in range(8):
+    
+#(l + 2, u + 1)
+#(l + 1, u + 2)
+#(l – 1, u + 2)
+#(l – 2, u + 1)
+#(r – 2, d – 1)
+#(r – 1, d – 2)
+#(r + 1, d – 2)
+#(r + 2, d – 1)
+#0<xpos<7 ranges in the (X,y)
+#0<ypos<7 ranges in the (x,Y)
+
+
+
+### YOUR CODE ENDS HERE ###
