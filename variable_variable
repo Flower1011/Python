@@ -1,0 +1,30 @@
+# The parameter called variable can accept a str, an int or a float. 
+You need to print out each character or digit on a new line. 
+You will need to account for input that is not a string. 
+Note that the variable variable has already been defined 
+for you in the variable_variable function definition.
+
+def variable_variable(variable) -> str:
+    old_stdout = sys.stdout
+    sys.stdout = mystdout = StringIO()
+    try:
+      pass
+      
+      
+      ### YOUR CODE STARTS HERE ###
+      if type(variable) is not str:
+        variable = str(variable)
+      for char in variable:
+        print(char)
+
+  
+
+
+
+      ### YOUR CODE ENDS HERE ###
+    except Exception as e:
+      print(e)
+    sys.stdout = old_stdout
+    result = mystdout.getvalue()
+    mystdout.close()
+    return result
